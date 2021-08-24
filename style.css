@@ -23,7 +23,7 @@ h1 {
     margin-bottom: 20px;
     width: 300px;
     font-size: 2em;
-    display: inline;
+    text-align: center;
 }
 
 .calculate {
