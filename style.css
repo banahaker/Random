@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, hsla(239, 83%, 84%, 1) 0%, hsla(204, 73%, 60%, 1) 50%, hsla(190, 68%, 50%, 1) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Hind Siliguri', sans-serif;
+    margin-bottom: 20px;
+    width: 300px;
+    font-size: 2em;
+    display: inline;
+}
+
+.calculate {
+    background-color: #fff;
+    width: 65vw;
+    max-width: 800px;
+    box-shadow: 0px 8px 57px -5px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 0px 8px 57px -5px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 0px 8px 57px -5px rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.control {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.result {
+    width: 65%;
+    color: rgb(153, 153, 153);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 3.5em;
+    outline: none;
+    border: 0;
+}
+
+.rangeSetting {
+    width: 35%;      
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding-right: 20px;
+}
+
+.rangeSetting p {
+    font-size: 30px;
+    color: #1c58ff;
+    margin-top: 10px;
+}
+
+.rangeSetting input {
+    height: 30px;
+    outline: none;
+    border-bottom: rgb(192, 189, 189) solid 3px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 30px;
+    margin-top: 10px;
+    transition: .3s;
+}
+
+@media screen and (max-width:900px){
+    .control {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .result {
+        width: 100%;
+        color: rgb(153, 153, 153);
+        display: flex;
+        text-align: center;
+        font-size: 3.5em;
+        outline: none;
+        border: 0;
+        padding-left: 0;
+    }    
+    .rangeSetting { 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding-right: 20px;
+    }
+    h1 {
+        color: #fff;
+        text-transform: capitalize;
+        font-family: 'Hind Siliguri', sans-serif;
+        margin-bottom: 20px;
+        width: 300px;
+        font-size: 2em;
+        display: inline;
+        text-align: center;
+    }
+}
+
+.rangeSetting input:focus {
+    border-bottom: #1c58ff solid 3px;
+}
+
+.createRandomNumber {
+    position: relative;
+    top: 15px;
+    background-color: #1c58ff;
+    width: 95%;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.createRandomNumber:hover {
+    transform: scale(1.03);
+}

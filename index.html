@@ -5,19 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>random number</h1>
     <div class="calculate">
-        <div class="result">
-            <p>Result</p>
+        <div class="control">
+            <div class="result">
+                <p>Result</p>
+            </div>
+            <div class="rangeSetting">
+                <p>Max</p>
+                <input type="text" id="max"/>
+                <p>Min</p>
+                <input type="text" id="min"/>
+            </div>
         </div>
-        <div class="rangeSetting">
-            <p>Max</p>
-            <input type="text" id="max" placeholder="Max"/>
-            <p>Min</p>
-            <input type="text" id="min" placeholder="Min"/>
-        </div>
-        <button class="createRandomNumber">Create</button>
+        <button class="createRandomNumber">generate</button>
     </div>
 </body>
 </html>
