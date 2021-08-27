@@ -11,19 +11,23 @@ console.log('pn0818x@outlook.com');
 generateBtn.addEventListener('click', ()=> {
     let max = parseInt(document.getElementById('max').value);
     max += 1;
+    
     let min = parseInt(document.getElementById('min').value);
     let exceptions = [];  
     for(i = 1; i <= count; i++){
         exc = parseInt(document.getElementById(`exc${i}`).value);
         exceptions.push(exc);
     }
+    
     exceptions.sort(function(a, b) {
         return a - b;
     });
-    let last = exceptions.length-1;
-    if (exceptions[last] == max-1) {
+
+    let last = exceptions[exceptions.length-1];
+    if (max-1 == last) {
         max--;
     }
+
     let result = Math.floor(Math.random() * (max - min) + min);
     for(v = 0; v < exceptions.length; v++){
         if(min == exceptions[v]){
@@ -34,7 +38,12 @@ generateBtn.addEventListener('click', ()=> {
             result  ++;
         }
     }
-    console.log(result);
+    
+    if(result > max){
+        alert('Please check your exception numbers\nYou may exclude all possibility');
+        result = 'please check your numbers';
+    }
+
     const resultHTML = document.getElementById('result');
     resultHTML.innerHTML = `${result}`
 });
@@ -42,6 +51,7 @@ generateBtn.addEventListener('click', ()=> {
 plusException.addEventListener('click', () => {
     const exception = document.getElementById('allException');
     const exc = document.getElementById(`exc${count}`).value;
+    
     if( exc === ""){
         alert('Please input the number in former input box\n請在前一個輸入框輸入數字')
     }else{
@@ -50,6 +60,7 @@ plusException.addEventListener('click', () => {
         excIn.id = `exc${count}`;
         excIn.className = `exception`;
         excIn.placeholder = 'Num';
+        excIn.autocomplete = 'off';
         exception.appendChild(excIn);
     }
 });
