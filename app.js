@@ -2,8 +2,8 @@ const generateBtn = document.getElementById('generateBtn');
 const plusException = document.getElementById('plusException');
 let count = 1;
 console.log('Welcome to Random Number console!!');
-console.log('Let\'t fun');
-console.log('You con look for bug in this app');
+console.log('Let\'s fun');
+console.log('You can look for bug in this app');
 console.log('If it has bug please contact me:');
 console.log('My Email:');
 console.log('pn0818x@outlook.com');
@@ -34,6 +34,7 @@ generateBtn.addEventListener('click', ()=> {
             result  ++;
         }
     }
+    console.log(result);
     const resultHTML = document.getElementById('result');
     resultHTML.innerHTML = `${result}`
 });
