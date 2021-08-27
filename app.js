@@ -1,29 +1,37 @@
 const generateBtn = document.getElementById('generateBtn');
 const plusException = document.getElementById('plusException');
 let count = 1;
+console.log('Welcome to Random Number console!!');
+console.log('Let\'t fun');
+console.log('You con look for bug in this app');
+console.log('If it has bug please contact me:');
+console.log('My Email:');
+console.log('pn0818x@outlook.com');
 
 generateBtn.addEventListener('click', ()=> {
     let max = parseInt(document.getElementById('max').value);
-    max = max + 1;
+    max += 1;
     let min = parseInt(document.getElementById('min').value);
-    let exceptions = [];
-    let exc =  document.getElementById(`exc${count}`).value;    
-    for(i = 1; i<=count; i++){
-        exc = document.getElementById(`exc${i}`).value;
+    let exceptions = [];  
+    for(i = 1; i <= count; i++){
+        exc = parseInt(document.getElementById(`exc${i}`).value);
         exceptions.push(exc);
     }
-    console.log(exceptions.length);
+    exceptions.sort(function(a, b) {
+        return a - b;
+    });
+    let last = exceptions.length-1;
+    if (exceptions[last] == max-1) {
+        max--;
+    }
     let result = Math.floor(Math.random() * (max - min) + min);
-    for(v = 0; v<exceptions.length; v++){
+    for(v = 0; v < exceptions.length; v++){
         if(min == exceptions[v]){
-            min++;
+            min ++;
             result = Math.floor(Math.random() * (max - min) + min);
         }
         if(result == exceptions[v]){
-            result = result-2;
-        }
-        if(result < min){
-            result++;
+            result  ++;
         }
     }
     const resultHTML = document.getElementById('result');
